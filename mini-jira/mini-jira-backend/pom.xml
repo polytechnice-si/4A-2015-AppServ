@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>fr.unice.polytech.appserv</groupId>
   <artifactId>mini-jira-backend</artifactId>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>AppServ :: Examples :: Mini-JIRA :: Back</name>
 
@@ -22,6 +22,17 @@
           <target>1.7</target>
         </configuration>
       </plugin>
+      <plugin>
+          <groupId>org.apache.openejb.maven</groupId>
+          <artifactId>tomee-maven-plugin</artifactId>
+          <version>1.7.1</version>
+          <configuration>
+              <tomeeVersion>1.7.1</tomeeVersion>
+              <tomeeClassifier>plus</tomeeClassifier>
+              <context>ROOT</context>
+              <deployOpenEjbApplication>true</deployOpenEjbApplication>
+          </configuration>
+        </plugin>
     </plugins>
   </build>
 
