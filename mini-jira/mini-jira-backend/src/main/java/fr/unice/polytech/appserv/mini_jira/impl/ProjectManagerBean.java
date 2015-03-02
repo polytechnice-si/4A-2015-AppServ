@@ -1,7 +1,7 @@
 package fr.unice.polytech.appserv.mini_jira.impl;
 
 import fr.unice.polytech.appserv.mini_jira.ProjectManager;
-import fr.unice.polytech.appserv.mini_jira.storage.ProjectDB;
+import fr.unice.polytech.appserv.mini_jira.storage.Database;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -12,7 +12,7 @@ import java.util.List;
 public class ProjectManagerBean implements ProjectManager {
 
 	@EJB
-	private ProjectDB database;
+	private Database database;
 
 	@Override
 	public boolean startProject(String name) {

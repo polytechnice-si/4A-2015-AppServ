@@ -1,7 +1,7 @@
 package fr.unice.polytech.appserv.mini_jira;
 
 import fr.unice.polytech.appserv.mini_jira.impl.EmailServerBean;
-import fr.unice.polytech.appserv.mini_jira.storage.ProjectDB;
+import fr.unice.polytech.appserv.mini_jira.storage.Database;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -24,7 +24,7 @@ public class ProjectManagerTest {
 				.addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
 				.addPackage(EmailServer.class.getPackage())
 				.addPackage(EmailServerBean.class.getPackage())
-				.addPackage(ProjectDB.class.getPackage());
+				.addPackage(Database.class.getPackage());
 	}
 
 	@EJB
