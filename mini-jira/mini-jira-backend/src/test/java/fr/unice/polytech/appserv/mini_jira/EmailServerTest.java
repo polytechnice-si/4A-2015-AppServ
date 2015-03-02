@@ -24,11 +24,11 @@ public class EmailServerTest {
 				.addPackage(EmailServerBean.class.getPackage());
 	}
 
-	@EJB(name = "EmailServer")
+	@EJB
 	private EmailServer emailServer;
 
 	@Test
-	public void should_create_greeting() {
+	public void should_send_message() {
 		assertTrue(emailServer.sendMessage("to_address", "my object", "this is a message"));
 	}
 
