@@ -5,7 +5,7 @@ import javax.ejb.Local;
 
 
 @Local
-public interface EmailServer extends java.rmi.Remote {
+public interface EmailServer {
 
 	public boolean sendMessage(String to, String object, String message);
 
