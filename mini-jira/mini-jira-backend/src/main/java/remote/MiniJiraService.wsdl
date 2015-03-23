@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.polytech.unice.fr/si/4a/appserv/demos" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://webservices.mini_jira.appserv.polytech.unice.fr/" name="MiniJiraImplService" targetNamespace="http://www.polytech.unice.fr/si/4a/appserv/demos">
+  <wsdl:import location="http://localhost:8080/minijira-back/webservices/MiniJiraService?wsdl=MiniJiraService.wsdl" namespace="http://webservices.mini_jira.appserv.polytech.unice.fr/">
+    </wsdl:import>
+  <wsdl:binding name="MiniJiraImplServiceSoapBinding" type="ns1:MiniJiraService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createNewProject">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createNewProject">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createNewProjectResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MiniJiraImplService">
+    <wsdl:port binding="tns:MiniJiraImplServiceSoapBinding" name="MiniJiraImplPort">
+      <soap:address location="http://localhost:8080/minijira-back/webservices/MiniJiraService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

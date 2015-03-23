@@ -1,4 +1,4 @@
-package fr.unice.polytech.appserv.mini_jira.impl;
+package fr.unice.polytech.appserv.mini_jira.business;
 
 import fr.unice.polytech.appserv.mini_jira.EmailServer;
 import fr.unice.polytech.appserv.mini_jira.TeamWork;
@@ -30,7 +30,7 @@ public class TeamWorkImpl implements TeamWork {
 		List<Task> tasks = db.getTasks();
 		for(Task t: tasks) {
 			if(t.getId() == task_id){
-				t.setDeveloper_id(developer_id);
+				t.setDeveloperId(developer_id);
 				return true;
 			}
 		}
@@ -42,7 +42,7 @@ public class TeamWorkImpl implements TeamWork {
 		List<Task> result = new LinkedList<>();
 		List<Task> tasks = db.getTasks();
 		for(Task t: tasks) {
-			if(t.getProject_id().equals(project_id)){
+			if(t.getProjectId().equals(project_id)){
 				result.add(t);
 			}
 		}

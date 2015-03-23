@@ -6,35 +6,39 @@ import java.io.Serializable;
 public class Task implements Serializable {
 
 	private int id;
-	private String project_id;
-	private String developer_id;
+	private String projectId;
+	private String developerId;
 	private String contents;
 
 
+	public Task() {}
+
 	public Task(int id, String pid, String contents) {
 		this.id = id;
-		this.project_id = pid;
+		this.projectId = pid;
 		this.contents = contents;
 	}
 
+	public void setId(int id) { this.id = id; }
 	public int getId() {
 		return id;
 	}
 
-	public String getProject_id() {
-		return project_id;
+	public String getProjectId() {
+		return projectId;
 	}
+	public void setProjectId(String projectId) { this.projectId = projectId; }
 
-	public String getDeveloper_id() {
-		return developer_id;
+	public String getDeveloperId() {
+		return developerId;
 	}
-
-	public void setDeveloper_id(String developer_id) {
-		this.developer_id = developer_id;
+	public void setDeveloperId(String developerId) {
+		this.developerId = developerId;
 	}
 
 	public String getContents() {
 		return contents;
 	}
+	public void setContents(String contents) { this.contents = contents; }
 
 }

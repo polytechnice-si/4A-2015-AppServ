@@ -1,6 +1,6 @@
 package fr.unice.polytech.appserv.mini_jira;
 
-import fr.unice.polytech.appserv.mini_jira.impl.EmailServerBean;
+import fr.unice.polytech.appserv.mini_jira.business.EmailServerBean;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;

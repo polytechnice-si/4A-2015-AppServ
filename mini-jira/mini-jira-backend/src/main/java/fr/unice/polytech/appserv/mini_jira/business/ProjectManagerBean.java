@@ -1,4 +1,4 @@
-package fr.unice.polytech.appserv.mini_jira.impl;
+package fr.unice.polytech.appserv.mini_jira.business;
 
 import fr.unice.polytech.appserv.mini_jira.ProjectManager;
 import fr.unice.polytech.appserv.mini_jira.storage.Database;
